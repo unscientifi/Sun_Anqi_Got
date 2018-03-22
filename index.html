@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Video</title>
+  <title>Video Stuff</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <section class="wrapper">
-      <video autoplay controls muted>
+      <video muted poster="images/vid1_large.png">
         <!-- need multiple sources to work cross-browser-->
         <!-- for older iOS devices. MP4 has be the first source-->
         <source src="video/mini_1.mp4" type="video/mp4">
@@ -17,6 +17,10 @@
         <source src="video/mini_webm" type="video/webm">
           Your browser doesn't support video!
       </video>
+      <button>pause</button>
+      <button>play</button>
+      <button>rewind</button>
   </section>
+    <script src="js/main.js"></script>
 </body>
 </html>
