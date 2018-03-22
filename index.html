@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Video</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <section class="wrapper">
+      <video autoplay controls muted>
+        <!-- need multiple sources to work cross-browser-->
+        <!-- for older iOS devices. MP4 has be the first source-->
+        <source src="video/mini_1.mp4" type="video/mp4">
+        <source src="video/mini_ogg" type="video/ogg">
+        <source src="video/mini_webm" type="video/webm">
+          Your browser doesn't support video!
+      </video>
+  </section>
+</body>
+</html>
