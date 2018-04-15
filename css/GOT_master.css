@@ -21,11 +21,17 @@ h1 {
 	font-size:1.25em;
 }
 
+p {
+	font-family: 'GOT_font';
+	color:white;
+  line-height: 1.8;
+}
+
 main {
-	position:relative;
-	width:100%;
-	text-align:center;
-	top:30px;
+	position: relative;
+	width: 100%;
+	text-align: center;
+  top: 100%;
 }
 
 #imageContainer {
@@ -35,11 +41,29 @@ main {
 	margin:0 auto;
 
 	/*uncomment below to hide house banners*/
-	/*overflow:hidden;*/
+	overflow:hidden;
+}
+#houseImages { position:relative; width:5200px; transition: all .5s; }
+#houseImages img { float:left; }
+
+
+.textContainer
+{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
 }
 
-#houseImages { position:relative; width:4000px; transition: all .5s; }
-#houseImages img { float:left; }
+.house-info {
+  > div :nth-child(1) {
+    padding: 1rem;
+    flex-basis: 700px;
+  }
+}
+}
+/* #houseContents {position: relative; transition: all .5s;}
+#houseContents p {float: left;} */
+
 
 #bottomNav { margin-top:30px; }
 
@@ -68,20 +92,26 @@ main {
 .stark { background-position:0px -54px; }
 .stark:hover { background-position:0px 0px; }
 
-.baratheon { background-position:-50.5px -54px; }
-.baratheon:hover { background-position:-51px 0px; }
+.baratheon { background-position:-52.5px -54px; }
+.baratheon:hover { background-position:-52.5px 0px; }
 
-.lannister { background-position:-101px -54px; }
-.lannister:hover { background-position:-101px 0px; }
+.lannister { background-position:-103px -54px; }
+.lannister:hover { background-position:-103px 0px; }
 
-.tully { background-position:-152px -54px; }
-.tully:hover { background-position:-152px 0px; }
+.tully { background-position:-153.5px -54px; }
+.tully:hover { background-position:-153.5px 0px; }
 
-.greyjoy { background-position:-202px -54px; }
-.greyjoy:hover { background-position:-202px 0px; }
+.greyjoy { background-position:-204px -54px; }
+.greyjoy:hover { background-position:-204px 0px; }
 
-.arryn { background-position:-253px -54px; }
-.arryn:hover { background-position:-253px 0px; }
+.arryn { background-position:-254.5px -54px; }
+.arryn:hover { background-position:-254.5px 0px; }
+
+.targaryen { background-position: -305.5px -54px;}
+.targaryen:hover { background-position: -305.5px 0px; }
+
+.frey { background-position: -356px -54px;}
+.frey:hover { background-position: -356px 0px; }
 /* ----- end image sprite ----- */
 
 /* ----- classes for transitions ----- */
@@ -102,10 +132,10 @@ main {
 
 .lightbox {
 	display: none;
-	position: absolute; 
-	top: 0; 
-	width: 100%; 
-	height: 100%; 
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
 	text-align: center;
 	background-color: rgba(0,0,0,0.95);
 }
@@ -127,5 +157,78 @@ video {
 	width: 80%;
 	margin-top: 10%;
 	border: thin solid #949393;
+  position: relative;
 }
 
+
+#controls
+{
+  height: 20px;
+  width: 78%;
+  padding: 14px;
+  position: absolute;
+  top: 113%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: all .5s;
+}
+
+#seekBar
+{
+  width: 100%;
+  height: 8px;
+  background-color: gray;
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#fill
+{
+  height: 8px;
+  background-color: #DBA74A;
+}
+
+#currentTime
+{
+  font-family: monospace;
+  font-size: 14px;
+  color: #DBA74A;
+  float: left;
+  vertical-align: top;
+}
+
+#playBtn
+{
+  cursor: pointer;
+}
+
+#Speaker
+{
+  cursor: pointer;
+
+}
+
+#setVolume
+{
+  vertical-align: top;
+}
+input[type=range]
+{
+  -webkit-appearance: none !important;
+  background-color: #666;
+  height: 4px;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type=range] :: -webkit-slider-thumb
+{
+  -webkit-appearance: none !important;
+  background-color: #DBA74A;
+  height: 10px;
+  width: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}

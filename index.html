@@ -1,26 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Video Stuff</title>
-  <link rel="stylesheet" href="css/main.css">
+<meta charset="UTF-8">
+<title>DOT</title>
+<link href="css/meyerReset.css" rel="stylesheet" type="text/css" media="screen">
+<link href="css/GOT_master.css" rel="stylesheet" type="text/css" media="screen">
+<!-- font awesome links-->
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/solid.js" integrity="sha384-P4tSluxIpPk9wNy8WSD8wJDvA8YZIkC6AQ+BfAFLXcUZIPQGu4Ifv4Kqq+i2XzrM" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/fontawesome.js" integrity="sha384-2IUdwouOFWauLdwTuAyHeMMRFfeyy4vqYNjodih+28v2ReC+8j+sLF9cK339k5hY" crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <section class="wrapper">
-      <video muted poster="images/vid1_large.png">
-        <!-- need multiple sources to work cross-browser-->
-        <!-- for older iOS devices. MP4 has be the first source-->
-        <source src="video/mini_1.mp4" type="video/mp4">
-        <source src="video/mini_ogg" type="video/ogg">
-        <source src="video/mini_webm" type="video/webm">
-          Your browser doesn't support video!
-      </video>
-      <button>pause</button>
-      <button>play</button>
-      <button>rewind</button>
-  </section>
-    <script src="js/main.js"></script>
+    <main>
+
+    <section id="imageContainer">
+    	<div id="houseImages"> <!-- add in all of the images to make a scrolling "banner" -->
+    		<img src="images/stark.jpg"/>
+    		<img src="images/baratheon.jpg"/>
+    		<img src="images/lannister.jpg"/>
+    		<img src="images/tully.jpg"/>
+    		<img src="images/greyjoy.jpg"/>
+    		<img src="images/arryn.jpg"/>
+        <img src="images/targaryen.jpg"/>
+        <img src="images/frey.jpg"/>
+        </div>
+    </section>
+
+    <nav id="bottomNav">
+    	<ul id="navList">
+        	<!-- custom data attribute, allowing to pass custom data https://developer.mozilla.org/en/docs/Web/API/HTMLElement/dataset -->
+            <li><div class="sigilContainer stark" data-offset="0"></div></li>
+            <li><div class="sigilContainer baratheon" data-offset="1"></div></li>
+            <li><div class="sigilContainer lannister" data-offset="2"></div></li>
+            <li><div class="sigilContainer tully" data-offset="3"></div></li>
+            <li><div class="sigilContainer greyjoy" data-offset="4"></div></li>
+            <li><div class="sigilContainer arryn" data-offset="5"></div></li>
+            <li><div class="sigilContainer targaryen" data-offset="6"></div></li>
+            <li><div class="sigilContainer frey" data-offset="7"></div></li>
+        </ul>
+    </nav>
+<div id="houseDetail">
+    <h1>Winter is Coming</h1><!-- replace this with the house name -->
+    <!-- <p class="house-info"></p> -->  <!-- replace this with house details (github gist for details) -->
+</div>
+
+<section class="house-info textContainer">
+  <div id="houseContents" class="hide">
+    <div class="stark">
+          <p>House Stark of Winterfell is a Great House of Westeros, ruling over the vast region known as the North from their seat in Winterfell. It is one of the oldest lines of Westerosi nobility by far, claiming a line of descent stretching back over eight thousand years. Before the Targaryen conquest, as well as during the War of the Five Kings and Daenerys Targaryen's invasion of Westeros, the leaders of House Stark ruled over the region as the Kings in the North.</p>
+    </div>
+    <div class="baratheon">
+          <p>House Baratheon of Storm's End is a legally extinct Great House of Westeros. A cadet branch was formerly the royal house, but House Lannister now controls the throne. House Baratheon traditionally ruled the Stormlands on the eastern coast of Westeros, aptly named for its frequent storms, from their seat of Storm's End.
+          House Baratheon became the royal house of the Seven Kingdoms after Robert Baratheon led a rebellion against the Targaryen dynasty. At the end of the rebellion, Robert ascended the Iron Throne as Robert I and married Cersei Lannister after the death of Lyanna Stark.</p>
+    </div>
+    <div class="lannister">
+          <p>House Lannister of Casterly Rock is one of the Great Houses of Westeros, one of its richest and most powerful families and oldest dynasties. It is also the current royal house of the Seven Kingdoms following the extinction of House Baratheon of King's Landing, which had been their puppet house anyway.
+          The Lannisters rule over the Westerlands. Their seat is Casterly Rock, a massive rocky promontory overlooking the Sunset Sea which has had habitations and fortifications built into it over the millennia. They are the Lords Paramount of the Westerlands and Wardens of the West. As the new royal house, they also rule directly over the Crownlands from their seat of the Red Keep in King's Landing, the traditional seat of the royal family.</p>
+    </div>
+    <div class="tully">
+          <p>House Tully of Riverrun is an exiled Great House of Westeros. Its most senior member carried the title of Lord of Riverrun and Lord Paramount of the Trident, until the Red Wedding. The current head is Lord Edmure Tully, son of the late Hoster Tully. The Tully sigil is a silver trout on a red and blue background. Their house words are "Family, Duty, Honor."</p>
+    </div>
+    <div class="greyjoy">
+          <p>House Greyjoy of Pyke is one of the Great Houses of Westeros. It rules over the Iron Islands, a harsh and bleak collection of islands off the west coast of Westeros, from the castle at Pyke. The head of the house is the Lord Reaper of Pyke.
+          House Greyjoy's sigil is traditionally a golden kraken on a black field. Their house words are "We Do Not Sow," although the phrase "What Is Dead May Never Die" is also closely associated with House Greyjoy and their bannermen, as they are associated with the faith of the Drowned God.</p>
+    </div>
+    <div class="arryn">
+          <p>House Arryn of the Eyrie is one of the Great Houses of Westeros. It has ruled over the Vale of Arryn for millennia, originally as the Kings of Mountain and Vale and more recently as Lords Paramount of the Vale and Wardens of the East under the Targaryen kings and Baratheon-Lannister kings. The nominal head of House Arryn is Robin Arryn, the Lord of the Eyrie, with his stepfather Petyr Baelish acting as Lord Protector until he reaches the age of majority.</p>
+    </div>
+    <div class="targaryen">
+          <p>House Targaryen of Dragonstone is a Great House of Westeros and was the ruling royal House of the Seven Kingdoms for three centuries since it conquered and unified the realm, before it was deposed during Robert's Rebellion and House Baratheon replaced it as the new royal House. The few surviving Targaryens fled into exile to the Free Cities of Essos across the Narrow Sea. Currently based on Dragonstone off of the eastern coast of Westeros, House Targaryen seeks to retake the Seven Kingdoms from House Lannister, who formally replaced House Baratheon as the royal House following the destruction of the Great Sept of Baelor.</p>
+    </div>
+    <div class="frey">
+        <p>House Frey of the Twins was the Great House of the Riverlands, having gained their position for their treachery against their former liege lords, House Tully, who were stripped of all their lands and titles for their rebellion against the Iron Throne; House Tully had supported the independence movement for the Kingdom of the North. The current head of the house is unknown following the assassinations of Lord Walder Frey and two of his sons, Lothar Frey and Walder Rivers, by the vengeful Arya Stark. This is made more complex by the subsequent assassination of all the male Freys soon after.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="lightbox">
+    <span class="close-lightbox">x</span>
+    <!-- add video here with sources for fallback / standards -->
+
+    <video>
+        <source src="video/House-Stark.mp4" type="video/mp4">
+    </video>
+
+    <!-- <div class="controls">
+      <i class="fas fa-pause-circle"></i>
+    </div> -->
+    <div id="controls">
+      <div id="seekBar">
+        <div id="fill"></div>
+      </div>
+
+    <table border="0">
+      <tr>
+        <td width="40%">
+            <div id="currentTime">00:00 / 00:00</div>
+        </td>
+        <td width="40%" id="pnp">
+          <img src="images/Pause.png" onclick="playOrPause()" id="playBtn">
+        </td>
+        <td width="40%" id="mute">
+          <img src="images/Speaker.png" onclick="muteOrUnmute()" id="speaker">
+        </td>
+        <td>
+          <input type="range" id="volume" min="0" max="100" value="100" step="10"/>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+</section>
+<script src="js/GOT_master.js"></script>
 </body>
 </html>
